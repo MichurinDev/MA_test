@@ -21,11 +21,11 @@ cursor.execute("""
         FOREIGN KEY (pos_id) REFERENCES pos(id)
     );
 """)
-conn.commit()
 
-cursor.execute("INSERT INTO pos (id, title) VALUES (1, 'Item 1');")
-cursor.execute("INSERT INTO reports (id, barcode, price, pos_id) VALUES (1, '123456', 10.0, 1);")
-cursor.execute("INSERT INTO reports (id, barcode, price, pos_id) VALUES (2, '123456', 10.0, 1);")
+cursor.execute("INSERT INTO pos VALUES (1, 'Item 1');")
+cursor.execute("INSERT INTO reports VALUES (1, '123456', 10.0, 1)")
+cursor.execute("INSERT INTO reports VALUES (2, '123456', 10.0, 1)")
+
 conn.commit()
 
 cursor.execute(
